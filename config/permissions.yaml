@@ -1,0 +1,431 @@
+general:
+  title:
+    ru: 'Основые'
+    en: 'General'
+  perms:
+    - id: 0
+      title:
+        ru: 'Создавать приглашения'
+        en: 'Create invites'
+      permission: 'CREATE_INSTANT_INVITE'
+      description:
+        ru: 'Позволяет создавать мгновенные приглашения'
+        en: 'Allows creation of instant invite'
+      state: no
+    - id: 1
+      title:
+        ru: 'Выгонять участников'
+        en: 'Kick members'
+      permission: 'KICK_MEMBERS'
+      description:
+        ru: 'Позволяет выгонять участников'
+        en: 'Allows kicking members'
+      state: no
+    - id: 2
+      title:
+        ru: 'Банить участников'
+        en: 'Ban members'
+      permission: 'BAN_MEMBERS'
+      description:
+        ru: 'Позволяет блокировать участников' 
+        en: 'Allows baning members'
+      state: no
+    - id: 3
+      title:
+        en: 'Administrator'
+        ru: 'Администратор'
+      permission: 'ADMINISTRATOR'
+      description:
+        en: 'Allows all permissions and bypasses channel permission overwrites'
+        ru: 'Предоставляет все разрешения и обходит перезапись разрешений канала'
+      state: no
+    - id: 4
+      title:
+        ru: 'Управлять каналами'
+        en: 'Manage channels'
+      permission: 'MANAGE_CHANNELS'
+      description:
+        ru: 'Позволяет управлять каналами и редактировать их'
+        en: 'Allows management and editing of channels'
+      state: no 
+    - id: 5
+      title:
+        ru: 'Управлять сервером'
+        en: 'Manage guild'
+      permission: 'MANAGE_GUILD'
+      description: 
+        ru: 'Позволяет управлять сервером и редактировать его'
+        en: 'Allows management and editing of the guild'
+      state: no
+    - id: 10
+      title:
+        ru: 'Просматривать каналы'
+        en: 'View channels'
+      permission: 'VIEW_CHANNEL'
+      description: 
+        ru: 'Позволяет участникам гильдии просматривать канал, в том числе читать сообщения в текстовых каналах и присоединяться к голосовым каналам'
+        en: 'Allows guild members to view a channel, which includes reading messages in text channels and joining voice channels'
+      state: no
+    - id: 26
+      title: 
+        ru: 'Менять никнеймы'
+        en: 'Change micknames'
+      permission: 'CHANGE_NICKNAMES'
+      description:
+        ru: 'Позволяет менять собственный никнейм'
+        en: 'Allows for modification of own nickname'
+    - id: 27
+      title: 
+        ru: 'Управлять никнеймами'
+        en: 'Manage nicknames'
+      permission: 'MANAGE_NICKNAMES'
+      description:
+        en: 'Allows for modification of other users nicknames'
+        ru: 'Позволяет изменять ники других пользователей'
+      state: no
+    - id: 28
+      title:
+        ru: 'Управлять ролями'
+        en: 'Manage roles'
+      permission: 'MANAGE_ROLES'
+      description:
+        ru: '	Позволяет управлять ролями и редактировать их'
+        en: 'Allows management and editing of roles'  
+      state: no
+    - id: 30
+      title:
+        ru: 'Управлять активностью'
+        en: 'Manage guild expresions'
+      permission: 'MANAGE_GUILD_EXPRESSIONS'
+      description:
+        ru: 'Позволяет редактировать и удалять эмодзи, стикеры и звуки, созданные всеми пользователями'
+        en: 'Allows for editing and deleting emojis, stickers, and soundboard sounds created by all users'
+      state: no
+    - id: 33
+      title:
+        ru: 'Управлять событиями'
+        en: 'Manage events'
+      permission: 'MANAGE_EVENTS'
+      description:
+        ru: 'Позволяет редактировать и удалять запланированные события, созданные всеми пользователями'
+        en: 'Allows for editing and deleting scheduled events created by all users'
+      state: no
+    - id: 34
+      title:
+        ru: 'Управлять ветками'
+        en: 'Manage threads'
+      permission: 'MANAGE_THREADS'
+      description:
+        ru: 'Позволяет удалять и архивировать темы, а также просматривать все личные темы'
+        en: 'Allows for deleting and archiving threads, and viewing all private threads'
+      state: no
+    - id: 29
+      title:
+        ru: 'Управлять вебхуками'
+        en: 'Manage webhooks'
+      permission: 'MANAGE_WEBHHOKS'
+      description:
+        ru: 'Позволяет управлять вебхуками и редактировать их'
+        en: 'Allows management and editing of webhooks'
+      state: no
+    - id: 40
+      title:
+        ru: 'Управлять участниками'
+        en: 'Moderate members'
+      permission: 'MODERATE_MEMBERS'
+      description:
+        ru: 'Позволяет ограничивать время, в течение которого пользователи могут отправлять сообщения в чате и ветках, а также реагировать на них, а также говорить в голосовых и сценических каналах'
+        en: 'Allows for timing out users to prevent them from sending or reacting to messages in chat and threads, and from speaking in voice and stage channels'
+      state: no
+    - id: 43
+      title:
+        ru: 'Управлять активностью сервера'
+        en: 'Manage guild expressions'
+      permission: 'CREATE_GUILD_EXPRESSIONS'
+      not_available_for_bot: yes
+      description:
+        ru: 'Позволяет создавать эмодзи, стикеры и звуки для саундборда, а также редактировать и удалять их, созданные текущим пользователем'
+        en: 'Allows for creating emojis, stickers, and soundboard sounds, and editing and deleting those created by the current user'
+      state: no
+    - id: 44
+      title:
+        ru: 'Управлять событиями'
+        en: 'Manage events'
+      permission: 'CREATE_EVENTS'
+      not_available_for_bot: yes
+      description:
+        ru: 'Позволяет создавать запланированные события, а также редактировать и удалять события, созданные текущим пользователем.'
+        en: 'Allows for creating scheduled events, and editing and deleting those created by the current user.'
+      state: no
+text:
+  title:
+    ru: 'Текстовые'
+    en: 'Text'
+  perms:
+    - id: 6
+      title: 
+        ru: 'Добавлять реакции'
+        en: 'Add reactions'
+      permission: 'ADD_REACTIONS'
+      description:
+        ru: 'Позволяет добавлять новые реакции к сообщениям. Это разрешение не распространяется на использование существующих реакций в сообщении.'
+        en: 'Allows for adding new reactions to messages. This permission does not apply to reacting with an existing reaction on a message.'
+      state: no
+    - id: 11
+      title: 
+        ru: 'Отправлять сообщения'
+        en: 'Send messages'
+      permission: 'SEND_MESSAGES'
+      description:
+        ru: 'Позволяет отправлять сообщения в канале и создавать ветке на форуме (не позволяет отправлять сообщения в ветках)'
+        en: 'Allows for sending messages in a channel and creating threads in a forum (does not allow sending messages in threads)'
+      state: no 
+    - id: 12
+      title: 
+        ru: 'Отправлять TTS сообщения'
+        en: 'Send TTS messages'
+      permission: 'SEND_TTS_MESSAGES'
+      description:
+        ru: 'Позволяет отправлять сообщения /tts'
+        en: 'Allows for sending of /tts messages'
+      state: no 
+    - id: 13
+      title: 
+        ru: 'Управлять сообщениями'
+        en: 'Manage messages'
+      permission: 'MANAGE_MESSAGES'
+      description:
+        ru: 'Позволяет удалять сообщения других пользователей'
+        en: 'Allows for deletion of other users messages'
+      state: no 
+    - id: 14
+      title: 
+        ru: 'Встраивать ссылки'
+        en: 'Embed links'
+      permission: 'EMBED_LINKS'
+      description:
+        ru: 'Ссылки, отправленные пользователями с этим разрешением, будут автоматически встраиваться'
+        en: 'Links sent by users with this permission will be auto-embedded'
+      state: no
+    - id: 15
+      title: 
+        ru: 'Прикреплять файлы'
+        en: 'Attach files'
+      permission: 'ATTACH_FILES'
+      description:
+        ru: 'Позволяет загружать изображения и файлы'
+        en: 'Allows for uploading images and files'
+      state: no
+    - id: 16
+      title: 
+        ru: 'Читать историю сообщений'
+        en: 'Read message history'
+      permission: 'READ_MESSAGE_HISTORY'
+      description:
+        ru: 'Позволяет просматривать историю сообщений'
+        en: 'Allows for reading of message history'
+      state: no
+    - id: 17
+      title: 
+        ru: 'Упоминать @everyone'
+        en: 'Mention @everyone'
+      permission: 'MENTION_EVERYONE'
+      description:
+        ru: 'Позволяет использовать тег @everyone для уведомления всех пользователей в канале и тег @here для уведомления всех онлайн-пользователей в канале'
+        en: 'Allows for using the @everyone tag to notify all users in a channel, and the @here tag to notify all online users in a channel'
+      state: no
+    - id: 18
+      title: 
+        ru: 'Использовать внешние эмодзи'
+        en: 'Use external emojis'
+      permission: 'USE_EXTERNAL_EMOJIS'
+      description:
+        ru: 'Позволяет использовать пользовательские эмодзи с других серверов'
+        en: 'Allows the usage of custom emojis from other servers'
+      state: no
+    - id: 31
+      title: 
+        ru: 'Использовать команды сервера'
+        en: 'Use application commands'
+      permission: 'USE_APPLICATION_COMMANDS'
+      description:
+        ru: 'Позволяет участникам использовать команды приложения, в том числе команды со слешем и команды контекстного меню.'
+        en: 'Allows members to use application commands, including slash commands and context menu commands.'
+      state: no
+    - id: 35
+      title: 
+        ru: 'Создавать публичные ветки'
+        en: 'Create public threads'
+      permission: 'CREATE_PUBLIC_THREADS'
+      description:
+        ru: 'Позволяет создавать общедоступные и анонсирующие ветки'
+        en: 'Allows for creating public and announcement threads'
+      state: no
+    - id: 36
+      title: 
+        ru: 'Создавать частные ветки'
+        en: 'Create private threads'
+      permission: 'CREATE_PRIVATE_THREADS'
+      description:
+        ru: 'Позволяет создавать частные ветки'
+        en: 'Allows for creating private threads'
+      state: no
+    - id: 37
+      title: 
+        ru: 'Использовать внешние стикеры'
+        en: 'Use external stickers'
+      permission: 'USE_EXTERNAL_STICKERS'
+      description:
+        ru: 'Позволяет использовать пользовательские стикеры с других серверов'
+        en: 'Allows the usage of custom stickers from other servers'
+      state: no
+    - id: 38
+      title: 
+        ru: 'Отправлять сообщения в ветках'
+        en: 'Send messages in threads'
+      permission: 'SEND_MESSAGES_IN_THREADS'
+      description:
+        ru: 'Позволяет отправлять сообщения в ветках'
+        en: 'Allows for sending messages in threads'
+      state: no
+    - id: 46
+      title: 
+        ru: 'Отправлять голосовые сообщения'
+        en: 'Send voice messages'
+      permission: 'SEND_VOICE_MESSAGES'
+      description:
+        ru: 'Позволяет отправлять голосовые сообщения'
+        en: 'Allows sending voice messages'
+      state: no
+    - id: 49
+      title: 
+        ru: 'Отправлять опросы'
+        en: 'Send polls'
+      permission: 'SEND_POLLS'
+      description:
+        ru: 'Позволяет отправлять опросы'
+        en: 'Allows sending polls'
+      state: no
+    - id: 51
+      title: 
+        ru: 'Закреплять сообщения'
+        en: 'Pin messages'
+      permission: 'PIN_MESSAGES'
+      description:
+        ru: 'Позволяет закреплять и откреплять сообщения'
+        en: 'Allows pinning and unpinning messages'
+      state: no
+voice: 
+  title:
+    ru: 'Голосовые'
+    en: 'Voice'
+  perms:
+    - id: 8
+      title:
+        ru: 'Приоритеный разговор'
+        en: 'Priority speaker'
+      permission: 'PRIORITY_SPEAKER'
+      description:
+        ru: 'Позволяет использовать приоритетный динамик в голосовом канале'
+        en: 'Allows for using priority speaker in a voice channel'
+      state: no
+    - id: 9
+      title:
+        ru: 'Стримить'
+        en: 'Stream'
+      permission: 'STREAM'
+      description:
+        ru: 'Позволяет пользователю выйти в эфир'
+        en: 'Allows the user to go live'
+      state: no
+    - id: 20
+      title:
+        ru: 'Подключаться'
+        en: 'Connect'
+      permission: 'CONNECT'
+      description:
+        ru: 'Позволяет присоединиться к голосовому каналу'
+        en: 'Allows for joining of a voice channel'
+      state: no
+    - id: 21
+      title:
+        ru: 'Разговаривать'
+        en: 'Speak'
+      permission: 'SPEAK'
+      description:
+        ru: 'Позволяет общаться в голосовом чате'
+        en: 'Allows for speaking in a voice channel'
+      state: no
+    - id: 22
+      title:
+        ru: 'Заглушать участников'
+        en: 'Mute members'
+      permission: 'MUTE_MEMBERS'
+      description:
+        ru: 'Позволяет отключать звук у участников голосового канала'
+        en: 'Allows for muting members in a voice channel'
+      state: no
+    - id: 23
+      title:
+        ru: 'Выключать звук участникам'
+        en: 'Deafen members'
+      permission: 'DEAFEN_MEMBERS'
+      description:
+        ru: 'Позволяет отключать звук у участников голосового канала'
+        en: 'Allows for deafening of members in a voice channel'
+      state: no
+    - id: 24
+      title:
+        ru: 'Перемещать участников'
+        en: 'Move members'
+      permission: 'MOVE_MEMBERS'
+      description:
+        ru: 'Позволяет перемещать участников между голосовыми каналами'
+        en: 'Allows for moving of members between voice channels'
+      state: no
+    - id: 25
+      title:
+        ru: 'Использовать голосовую активность'
+        en: 'Use voice activity detection'
+      permission: 'USE_VAD'
+      description:
+        ru: 'Позволяет использовать функцию распознавания голосовой активности в голосовом канале'
+        en: 'Allows for using voice-activity-detection in a voice channel'
+      state: no
+    - id: 32
+      title:
+        ru: 'Поднимать руку'
+        en: 'Request to speak'
+      permission: 'REQUEST_TO_SPEAK'
+      description:
+        ru: 'Позволяет запрашивать возможность говорить в сценических каналах.'
+        en: 'Allows for requesting to speak in stage channels.'
+      state: no
+    - id: 39
+      title:
+        ru: 'Использовать активность'
+        en: 'Use embedded activity'
+      permission: 'USE_EMBEDDED_ACTIVITIES'
+      description:
+        ru: 'Позволяет использовать Activity (приложения с флагом EMBEDDED)'
+        en: 'Allows for using Activities (applications with the EMBEDDED flag)'
+      state: no
+    - id: 42
+      title:
+        ru: 'Использовать саундпад'
+        en: 'Use soundboard'
+      permission: 'USE_SOUNDBOARD'
+      description:
+        ru: 'Позволяет использовать деку в голосовом канале'
+        en: 'Allows for using soundboard in a voice channel'
+      state: no
+    - id: 45
+      title:
+        ru: 'Использовать внешний саундпад'
+        en: 'Use external sounds'
+      permission: 'USE_EXTERNAL_SOUNDS'
+      description:
+        ru: 'Позволяет использовать пользовательские звуки с других серверов'
+        en: 'Allows the usage of custom soundboard sounds from other servers'
+      state: no
+

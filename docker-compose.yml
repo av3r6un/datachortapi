@@ -1,0 +1,13 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: datachortAPI
+    restart: unless-stopped
+    env_file: config/.env
+    ports:
+      - "80:8989"
+    volumes:
+      - .:/app/api
+    

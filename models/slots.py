@@ -6,8 +6,8 @@ from .base import Base
 slot_symbols = Table(
   'slot_symbols',
   Base.metadata,
-  Column('slot_uid', ForeignKey('slots.uid'), primary_key=True),
-  Column('symbol_id', ForeignKey('symbols.id'), primary_key=True)
+  Column('slot_uid', String(7), ForeignKey('slots.uid'), primary_key=True),
+  Column('symbol_id', Integer, ForeignKey('symbols.id'), primary_key=True)
 )
 
 

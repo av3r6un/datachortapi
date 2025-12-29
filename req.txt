@@ -4,3 +4,4 @@ PyYAML==6.0.3
 SQLAlchemy==2.0.44
 aiohttp==3.13.2
 aiomysql==0.3.2
+cryptography

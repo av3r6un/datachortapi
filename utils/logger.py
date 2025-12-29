@@ -3,7 +3,7 @@ import logging
 import os
 
 
-LOG_FILEPATH=os.path.join(os.path.abspath(os.path.dirname(__file__)), '..', '..', 'logs', 'all.log')
+LOG_FILEPATH=os.path.join(os.path.abspath(os.path.dirname(__file__)), '..', 'logs', 'all.log')
 
 def setup_logger(name: str = None, console: bool = False, filename: str = None) -> logging.Logger:
   """ Sets up and returns a logger with the specified name"""
@@ -37,4 +37,5 @@ def setup_logger(name: str = None, console: bool = False, filename: str = None) 
 
 def check_logs_folder():
   if not os.path.exists(os.path.split(LOG_FILEPATH)[0]):
+    print(os.path.split(LOG_FILEPATH)[0])
     os.makedirs(os.path.split(LOG_FILEPATH)[0])

@@ -20,7 +20,7 @@ async def spin_slots(req: Request, session: AsyncSession, **kwargs):
     message = ''
     for s in spin_result:
       message += f"{chr(int(s.emoji.replace('U+', ''), 16))} "
-    total_multiplier = reduce(mul, (j.reward_multiplier for j in jackpots), 1)
+    total_multiplier = reduce(lambda x, y: x*y, (j.reward_multiplier for j in jackpots), 1)
     
     user = await GuildUser.first(session, id=kwargs.get('author'))
     if not user:
@@ -44,7 +44,7 @@ async def discover_xp(req: Request, session: AsyncSession, **kwargs):
     user = await GuildUser.first(session, id=kwargs.get('author'))
     if not user:
       return json_response(dict(status='error', message='Author is not found! Maybe he has not been registered!'))
-    message = f':glowing_star: {user.xp_total} pts\n:medal:{max(int((user.xp_total / 100) ** settings.LEVEL_BIAS), 1)} level'
+    message = f':glowing_star: `{user.xp_total}` pts\n:medal: `{max(int((user.xp_total / 100) ** settings.LEVEL_BIAS), 1)}` level'
     return json_response(resp.response(reply=message.strip()))
   except Exception as e:
     print(e)
